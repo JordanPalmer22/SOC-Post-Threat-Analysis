@@ -45,4 +45,5 @@ This project demonstrates real-world threat detection using Wireshark and PCAP a
 
 ---
 
-> 🧩 This project is part of my SOC Analyst GitHub portfolio. For more projects, check out my [portfolio index](../).
+🧩 This project is part of my SOC Analyst GitHub portfolio. For more projects, check out my [portfolio index](https://github.com/JordanPalmer22).
+
