@@ -8,7 +8,7 @@ This project demonstrates real-world threat detection using Wireshark and PCAP a
 
 - **Tool Used**: Wireshark  
 - **Detected Behavior**: Data exfiltration via HTTP POST  
-- **Outcome**: Identified C2 communication and extracted indicators of compromise (IOCs)  
+- **Outcome**: Identified C2 communication and extracted indicators of compromise (IOCs)
 
 ---
 
@@ -33,7 +33,7 @@ This project demonstrates real-world threat detection using Wireshark and PCAP a
 
 - Wireshark  
 - GitHub (version control)  
-- Markdown (reporting)  
+- Markdown (reporting)
 
 ---
 
@@ -41,7 +41,7 @@ This project demonstrates real-world threat detection using Wireshark and PCAP a
 
 - How to detect and analyze suspicious POST activity using Wireshark  
 - Indicators of malware C2 behavior and network reconnaissance  
-- How to document and report IOCs for a SOC environment  
+- How to document and report IOCs for a SOC environment
 
 ---
 
