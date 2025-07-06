@@ -1,33 +1,49 @@
-# 🛡️ Threat Analysis: Suspicious POST Request from HEADLESS-PC
+# 🛡️ Threat Analysis: Suspicious POST Request from `HEADLESS-PC`
 
-This project showcases a real-world threat detection analysis using Wireshark and PCAP files. The analysis reveals a suspicious outbound HTTP POST containing internal host reconnaissance data — a strong indicator of malware beaconing or data exfiltration.
-
-## 📌 Summary
-- **PCAP Analysis Tool**: Wireshark
-- **Detected Behavior**: Data exfiltration via HTTP POST
-- **Outcome**: Identified C2 communication and clear indicators of compromise (IOCs)
-
-## 📂 Project Files
-| File/Folder | Description |
-|-------------|-------------|
-| `threat_analysis_report.md` | Full markdown write-up of the threat analysis. |
-| `pcap/` | Contains the original PCAP file. |
-| `artifacts/` | Extracted malicious POST payload. |
-| `screenshots/` | Wireshark visual aid of the request. |
-
-## 📷 Preview
-![Wireshark Payload](screenshots/wireshark_post_payload_view.png)
-
-## 🛠 Tools Used
-- Wireshark
-- GitHub for versioning
-- Markdown for documentation
-
-## 🧠 What I Learned
-- How to identify and extract POST payloads from PCAP
-- Signs of malware C2 and domain reconnaissance
-- Documenting IOCs in a professional report format
+This project demonstrates real-world threat detection using Wireshark and PCAP analysis. It focuses on identifying a suspicious outbound HTTP POST that contains internal host reconnaissance data — a strong indicator of malware beaconing or data exfiltration to a Command and Control (C2) server.
 
 ---
 
-> 🧩 This project is part of my SOC Analyst GitHub portfolio. For more, check out my [portfolio index](../).
+## 📌 Summary
+
+- **Tool Used**: Wireshark
+- **Detected Behavior**: Data exfiltration via HTTP POST
+- **Outcome**: Identified C2 communication and extracted indicators of compromise (IOCs)
+
+---
+
+## 📂 Project Files
+
+| File/Folder               | Description                                      |
+|---------------------------|--------------------------------------------------|
+| `threat_analysis_report.md` | Full markdown report detailing the analysis steps and findings |
+| `pcap/`                   | Contains the original PCAP file used in analysis |
+| `artifacts/`              | Extracted malicious POST payload for inspection  |
+| `screenshots/`            | Visual documentation (Wireshark views)           |
+
+---
+
+## 📷 Preview
+
+![Wireshark Payload Screenshot](screenshots/wireshark_post_payload_view.png)
+
+---
+
+## 🛠 Tools Used
+
+- Wireshark
+- GitHub (version control)
+- Markdown (reporting)
+
+---
+
+## 🧠 What I Learned
+
+- How to detect and analyze suspicious POST activity using Wireshark
+- Indicators of malware C2 behavior and network recon
+- How to document and report IOCs for a SOC environment
+
+---
+
+> 🧩 This project is part of my SOC Analyst GitHub portfolio. For more projects, check out my [portfolio index](../).
+
