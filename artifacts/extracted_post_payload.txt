@@ -1,0 +1,130 @@
+--Arasfjasu7
+Content-Disposition: form-data; name="sysinfo"
+
+		***SYSTEMINFO***
+
+Host Name - HEADLESS-PC
+OS Name - Microsoft Windows 7 Professional 
+OS Version - Service Pack 1
+OS Architecture - 64-bit
+Product Type - Workstation
+Build Type - Multiprocessor Free
+Registered Owner - admin
+Registered Organization - 
+Serial Number - 20223-164-1162091-94139
+Install Date - 30/12/1899 00.00.00
+Last Boot Up Time - 30/12/1899 00.00.00
+Windows Directory - C:\Windows
+System Directory - C:\Windows\system32
+Boot Device - \Device\HarddiskVolume1
+
+Total Physical Memory - 3916 Mb
+Available Physical Memory - 3916 Mb
+
+
+		/c ipconfig /all
+
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : Headless-PC
+   Primary Dns Suffix  . . . . . . . : halloweenjob.com
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : halloweenjob.com
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : localdomain
+   Description . . . . . . . . . . . : Intel(R) PRO/1000 MT Network Connection
+   Physical Address. . . . . . . . . : 00-50-8B-2A-96-0A
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv4 Address. . . . . . . . . . . : 10.100.9.107(Preferred) 
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : Wednesday, October 31, 2018 3:33:05 PM
+   Lease Expires . . . . . . . . . . : Thursday, November 08, 2018 3:33:04 PM
+   Default Gateway . . . . . . . . . : 10.100.9.1
+   DHCP Server . . . . . . . . . . . : 10.100.9.4
+   DNS Servers . . . . . . . . . . . : 10.100.9.4
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Tunnel adapter isatap.localdomain:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : 
+   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+
+
+		/c net config workstation
+Computer name                        \\HEADLESS-PC
+Full Computer name                   Headless-PC.halloweenjob.com
+User name                            ichabod.crane
+
+Workstation active on                
+	NetBT_Tcpip_{D16C1B73-D9A2-F69C-77D8-E3AD256CDC4B} (00508B2A960A)
+
+Software version                     Windows 7 Professional
+
+Workstation domain                   HALLOWEENJOB
+Workstation Domain DNS Name          halloweenjob.com
+Logon domain                         HALLOWEENJOB
+
+COM Open Timeout (sec)               0
+COM Send Count (byte)                16
+COM Send Timeout (msec)              250
+The command completed successfully.
+
+
+
+		/c net view /all
+System error 6118 has occurred.
+
+The list of servers for this workgroup is not currently available
+
+
+
+		/c net view /all /domain
+System error 6118 has occurred.
+
+The list of servers for this workgroup is not currently available
+
+
+
+		/c nltest /domain_trusts
+List of domain trusts:
+    0: HALLOWEENJOB halloweenjob.com (NT 5) (Forest Tree Root) (Primary Domain) (Native)
+The command completed successfully
+
+
+		/c nltest /domain_trusts /all_trusts
+List of domain trusts:
+    0: HALLOWEENJOB halloweenjob.com (NT 5) (Forest Tree Root) (Primary Domain) (Native)
+The command completed successfully
+
+
+		***LOCAL MACHINE DATA***
+
+User name: CN=Ichabod Crane,CN=Users,DC=halloweenjob,DC=com
+Computer name: CN=HEADLESS-PC,CN=Computers,DC=halloweenjob,DC=com
+Site name: Default-First-Site-Name
+Domain shortname: HALLOWEENJOB
+Domain name: halloweenjob.com
+Forest name: halloweenjob.com
+Domain controller: Halloweenjob-DC.halloweenjob.com
+Forest trees:
+	1 halloweenjob.com
+
+
+
+List of domains:
+Halloweenjob-DC.halloweenjob.com
+Admin Name: Administrator
+Admin Name: Administrator
+Admin Name: Administrator
+
+
+--Arasfjasu7--
