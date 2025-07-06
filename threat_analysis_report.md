@@ -11,15 +11,15 @@ This report analyzes suspicious network behavior captured on **October 31, 2018*
 ## 🔍 Key Observations
 
 | Field           | Detail                                 |
-|----------------|-----------------------------------------|
+|-----------------|-----------------------------------------|
 | **Source IP**   | `10.100.9.107`                         |
 | **Destination** | `173.171.132.82:8082`                  |
 | **Request Type**| HTTP `POST`                            |
 | **User-Agent**  | `test` (non-standard; not browser-based) |
-| **Payload**     | `multipart/form-data` including:       |
+| **Payload**     | `multipart/form-data`, including:      |
 |                 | - Running process list                 |
 |                 | - System information (OS, hostname)    |
-|                 | - Network configuration (ipconfig)     |
+|                 | - Network configuration (`ipconfig`)   |
 |                 | - Domain trust relationships           |
 
 ---
@@ -28,32 +28,32 @@ This report analyzes suspicious network behavior captured on **October 31, 2018*
 
 | Type        | Value                                 |
 |-------------|----------------------------------------|
-| Hostname    | `HEADLESS-PC`                          |
-| Domain      | `halloweenjob.com`                     |
-| C2 IP       | `173.171.132.82`                       |
-| POST Path   | `/sat91/HEADLESS-PC.../90`             |
-| User-Agent  | `test`                                 |
+| **Hostname**| `HEADLESS-PC`                          |
+| **Domain**  | `halloweenjob.com`                     |
+| **C2 IP**   | `173.171.132.82`                       |
+| **POST Path**| `/sat91/HEADLESS-PC.../90`           |
+| **User-Agent**| `test`                              |
 
 ---
 
 ## 🧠 Threat Assessment
 
-The structure and content of the POST payload indicate the presence of **malware beaconing behavior**, consistent with a **Remote Access Trojan (RAT)** or **C2 staging implant**. Specifically:
+The structure and content of the POST payload indicate the presence of **malware beaconing behavior**, consistent with a **Remote Access Trojan (RAT)** or C2 staging implant. Specifically:
 
 - The `test` User-Agent suggests a custom or scripted agent, not typical of standard software.
-- The reconnaissance data (system info, domain structure, process list) suggests pre-exfiltration or staging for lateral movement.
-- The POST destination (`173.171.132.82`) and URL path (`/sat91/...`) do not match legitimate services and likely represent a malicious Command and Control (C2) endpoint.
+- The reconnaissance data (system info, domain structure, process list) suggests **pre-exfiltration** or **staging for lateral movement**.
+- The POST destination (`173.171.132.82`) and URL path (`/sat91/...`) do not match any known legitimate service and likely represent a **malicious Command and Control (C2) endpoint**.
 
 ---
 
 ## 🧾 Conclusion
 
-This activity should be considered **malicious**. Immediate action should include:
+This activity should be considered **malicious**. Immediate response actions include:
 
-- Isolating `HEADLESS-PC` from the network
-- Scanning for persistence mechanisms (e.g., scheduled tasks, registry keys)
-- Reviewing additional traffic to/from `173.171.132.82`
-- Performing a full forensic analysis of the host
+- 🔒 Isolating `HEADLESS-PC` from the network  
+- 🧹 Scanning for persistence mechanisms (e.g., scheduled tasks, registry keys)  
+- 🔎 Reviewing additional traffic to/from `173.171.132.82`  
+- 🧬 Performing a full forensic analysis of the host  
 
 ---
 
