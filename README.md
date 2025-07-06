@@ -25,10 +25,10 @@ This project demonstrates real-world threat detection using Wireshark and PCAP a
 
 ## 📷 Preview
 
-![Wireshark Payload Screenshot](screenshots/wireshark_post_payload_view.png)
+[📁 View All Screenshots](./screenshots/)
+
 
 ---
-
 ## 🛠 Tools Used
 
 - Wireshark  
